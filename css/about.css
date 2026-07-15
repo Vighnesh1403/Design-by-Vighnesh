@@ -1,0 +1,1189 @@
+.about-me-card {
+  grid-column: span 8;
+  grid-row: span 12;
+}
+
+.gallary-card {
+  grid-column: span 3;
+  grid-row: span 4;
+  overflow: hidden;
+}
+
+.gallary-card .card-title {
+  justify-content: end;
+}
+
+.gallary-card .card-title img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.spotify-card {
+  grid-column: span 3;
+  grid-row: span 4;
+  overflow: hidden;
+}
+
+.card.anime-card {
+  grid-column: span 6;
+  grid-row: span 4;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 24px;
+  color: #1f1732;
+  background:
+    radial-gradient(
+      circle at 9% 10%,
+      rgba(210, 187, 255, 0.24) 0%,
+      rgba(210, 187, 255, 0) 22%
+    ),
+    radial-gradient(
+      circle at 92% 9%,
+      rgba(219, 203, 255, 0.44) 0%,
+      rgba(219, 203, 255, 0) 18%
+    ),
+    linear-gradient(180deg, #fffefe 0%, #fbf8ff 100%);
+  border: 1px solid rgba(205, 188, 255, 0.35);
+  box-shadow: 0 24px 52px rgba(34, 18, 68, 0.1);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.card.anime-card:hover {
+  border-color: rgba(188, 146, 255, 0.6);
+  background:
+    radial-gradient(
+      circle at 82% 16%,
+      rgba(175, 122, 255, 0.34) 0%,
+      rgba(175, 122, 255, 0) 18%
+    ),
+    radial-gradient(
+      circle at 16% 88%,
+      rgba(104, 60, 231, 0.18) 0%,
+      rgba(104, 60, 231, 0) 12%
+    ),
+    linear-gradient(180deg, #cab6ff 0%, #9b65ff 100%);
+}
+
+.anime-card__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(6px);
+}
+
+.anime-card__glow--top {
+  width: 300px;
+  height: 300px;
+  top: -140px;
+  right: -120px;
+  background: radial-gradient(
+    circle,
+    rgba(218, 200, 255, 0.44) 0%,
+    rgba(218, 200, 255, 0) 62%
+  );
+}
+
+.anime-card__glow--bottom {
+  width: 240px;
+  height: 240px;
+  left: -120px;
+  bottom: -120px;
+  background: radial-gradient(
+    circle,
+    rgba(140, 96, 255, 0.2) 0%,
+    rgba(140, 96, 255, 0) 68%
+  );
+}
+
+.anime-card__shell {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.anime-card__intro {
+  max-width: 260px;
+}
+
+.anime-card__star {
+  font-size: 17px;
+  color: #930eff;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.anime-card__jp {
+  font-size: 16px;
+  letter-spacing: 0.32em;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #7f75aa;
+}
+
+.anime-card__intro h2 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+  color: #1a1830;
+}
+
+.anime-card__rule {
+  width: 44px;
+  height: 3px;
+  border-radius: 999px;
+  margin: 14px 0 14px;
+  background: linear-gradient(90deg, #a26dff 0%, #d4b8ff 100%);
+}
+
+.anime-card__intro p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #111111;
+}
+
+.anime-card__brand {
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 8px 18px rgba(61, 30, 120, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  white-space: nowrap;
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    color 0.35s ease;
+}
+
+.anime-card__brand img {
+  width: 100%;
+}
+
+.anime-card__posters {
+  position: relative;
+  flex: 1;
+  margin-top: 0;
+  min-height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anime-poster {
+  position: absolute;
+  width: 118px;
+  height: 166px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.64);
+  box-shadow: 0 18px 32px rgba(22, 10, 44, 0.18);
+  transform-origin: center center;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 0.68, 0, 1.2),
+    box-shadow 0.45s cubic-bezier(0.22, 0.68, 0, 1.2),
+    top 0.45s cubic-bezier(0.22, 0.68, 0, 1.2),
+    left 0.45s cubic-bezier(0.22, 0.68, 0, 1.2),
+    right 0.45s cubic-bezier(0.22, 0.68, 0, 1.2),
+    filter 0.35s ease;
+  overflow: hidden;
+}
+
+.anime-poster img {
+  width: 100%;
+}
+
+.anime-poster::before,
+.anime-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.anime-poster::before {
+  background: radial-gradient(
+    circle at 50% 22%,
+    rgba(255, 255, 255, 0.24) 0%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  mix-blend-mode: screen;
+}
+
+.anime-poster::after {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(10, 6, 19, 0.18) 100%
+  );
+}
+
+.anime-poster span {
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  color: #fff;
+  text-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+}
+
+.anime-poster--one {
+  left: 10%;
+  top: 72px;
+  transform: rotate(-17deg);
+  background: linear-gradient(160deg, #2b2140 0%, #161224 100%);
+}
+
+.anime-poster--one span {
+  max-width: 72px;
+}
+
+.anime-poster--two {
+  left: 31%;
+  top: 56px;
+  transform: rotate(-8deg);
+  background: linear-gradient(160deg, #6f91c1 0%, #24345b 100%);
+}
+
+.anime-poster--two span {
+  max-width: 74px;
+}
+
+.anime-poster--three {
+  left: 52%;
+  top: 34px;
+  width: 132px;
+  height: 184px;
+  transform: rotate(5deg);
+  z-index: 2;
+  background: linear-gradient(160deg, #ff9b5f 0%, #6b2a18 40%, #2e1010 100%);
+}
+
+.anime-poster--three span {
+  max-width: 92px;
+  font-size: 19px;
+}
+
+.anime-poster--four {
+  right: 6%;
+  top: 60px;
+  transform: rotate(15deg);
+  background: linear-gradient(160deg, #d0ae72 0%, #8a5e22 45%, #302313 100%);
+}
+
+.anime-poster--four span {
+  max-width: 76px;
+}
+
+.anime-card:hover .anime-poster--one {
+  left: 8%;
+  top: 0px;
+  transform: rotate(-20deg);
+}
+
+.anime-card:hover .anime-poster--two {
+  left: 29%;
+  top: -10px;
+  transform: rotate(-11deg);
+}
+
+.anime-card:hover .anime-poster--three {
+  top: -20px;
+  transform: rotate(7deg);
+}
+
+.anime-card:hover .anime-poster--four {
+  right: 4%;
+  top: 10px;
+  transform: rotate(18deg);
+}
+
+.anime-card__footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.anime-card__meter {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #3c345f;
+  background:
+    radial-gradient(circle at center, #faf7ff 0%, #faf7ff 52%, transparent 54%),
+    conic-gradient(#8d57ff 0 242deg, #e6dbff 242deg 360deg);
+  box-shadow: inset 0 0 0 6px rgba(175, 140, 255, 0.12);
+}
+
+.anime-card__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 16px;
+  border-left: 1px solid rgba(114, 97, 164, 0.22);
+}
+
+.anime-card__summary span {
+  font-size: 14px;
+  color: #666182;
+}
+
+.anime-card__summary strong {
+  font-size: 20px;
+  color: #7851f2;
+  letter-spacing: -0.02em;
+}
+
+.anime-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(176, 154, 228, 0.2);
+  font-size: 17px;
+  font-weight: 700;
+  color: #1f1732;
+  white-space: nowrap;
+  box-shadow: 0 8px 18px rgba(61, 30, 120, 0.08);
+}
+
+.anime-card__cta i {
+  font-size: 15px;
+}
+
+.designers-card {
+  grid-column: span 3;
+  grid-row: span 4;
+}
+
+.games-card {
+  grid-column: span 3;
+  grid-row: span 4;
+}
+
+.about-me-card h1 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 150%;
+  color: rgb(18, 18, 18);
+}
+
+.about-me-card p {
+  font-size: 20px;
+  font-weight: 450;
+  letter-spacing: -0.02em;
+  line-height: 144%;
+  color: rgba(18, 18, 18, 0.8);
+  margin-bottom: 14px;
+}
+
+.spotify-card .card-title img {
+  width: 48px;
+  height: 48px;
+}
+
+.spotify-card .card-center .center-image {
+  width: 144px;
+  height: 144px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.9px 4px 0px;
+}
+
+.spotify-card .card-center .center-image img {
+  width: 100%;
+  height: auto;
+}
+
+.spotify-card .card-center .center-text img {
+  width: 95px;
+  height: 28px;
+}
+
+.spotify-card .card-center .center-text p {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-size: 22px;
+  font-weight: 700;
+  transform: rotate(-10deg);
+  margin: 0;
+}
+
+.music-img-1 {
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.9px 4px 0px;
+  position: absolute;
+  top: 60px;
+  left: -100px;
+  transform: rotate(20deg);
+  transition:
+    transform 0.45s cubic-bezier(0.22, 0.68, 0, 1.2),
+    left 0.45s cubic-bezier(0.22, 0.68, 0, 1.2),
+    top 0.45s cubic-bezier(0.22, 0.68, 0, 1.2);
+}
+
+.music-img-1 img {
+  width: 100%;
+}
+
+.spotify-card:hover .music-img-1 {
+  left: 20px;
+  top: 60px;
+}
+
+.music-img-2 {
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.9px 4px 0px;
+  position: absolute;
+  top: 60px;
+  right: -100px;
+  transform: rotate(-20deg);
+  transition:
+    transform 0.45s cubic-bezier(0.22, 0.68, 0, 1.2),
+    right 0.45s cubic-bezier(0.22, 0.68, 0, 1.2),
+    top 0.45s cubic-bezier(0.22, 0.68, 0, 1.2);
+}
+
+.music-img-2 img {
+  width: 100%;
+}
+
+.spotify-card:hover .music-img-2 {
+  right: 20px;
+  top: 60px;
+}
+
+.music-img-3 {
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.9px 4px 0px;
+  position: absolute;
+  bottom: -110px;
+  left: 80px;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 0.68, 0, 1.2),
+    left 0.45s cubic-bezier(0.22, 0.68, 0, 1.2),
+    bottom 0.45s cubic-bezier(0.22, 0.68, 0, 1.2);
+}
+
+.music-img-3 img {
+  width: 100%;
+}
+
+.spotify-card:hover .music-img-3 {
+  bottom: 40px;
+}
+
+.spotify-card:hover {
+  background-color: rgb(137, 230, 148);
+}
+
+@media (max-width: 992px) {
+  .anime-card {
+    grid-column: span 14;
+    grid-row: span 5;
+  }
+
+  .anime-card__posters {
+    min-height: 206px;
+  }
+}
+
+@media (max-width: 768px) {
+  .anime-card {
+    padding: 24px;
+  }
+
+  .anime-card__header {
+    flex-direction: column;
+  }
+
+  .anime-card__brand {
+    align-self: flex-start;
+  }
+
+  .anime-card__intro h2 {
+    font-size: 32px;
+  }
+
+  .anime-poster {
+    width: 104px;
+    height: 150px;
+  }
+
+  .anime-poster--three {
+    width: 118px;
+    height: 166px;
+  }
+
+  .anime-poster--one {
+    left: 8%;
+  }
+
+  .anime-poster--two {
+    left: 29%;
+  }
+
+  .anime-poster--three {
+    left: 48%;
+  }
+
+  .anime-poster--four {
+    right: 6%;
+  }
+
+  .anime-card__footer {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .anime-card__summary {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .anime-card__cta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .anime-card {
+    grid-row: span 6;
+    padding: 20px;
+  }
+
+  .anime-card__posters {
+    min-height: 170px;
+  }
+
+  .anime-poster--one {
+    left: -2%;
+  }
+
+  .anime-poster--two {
+    left: 22%;
+  }
+
+  .anime-poster--three {
+    left: 42%;
+  }
+
+  .anime-poster--four {
+    right: -2%;
+  }
+}
+
+.games-card .card-title img {
+  width: 48px;
+  height: 48px;
+}
+
+.games-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(160deg, #f4f8ff 0%, #eaf2ff 55%, #e3edff 100%);
+  border: 1px solid rgba(140, 190, 255, 0.28);
+  transition:
+    background 0.5s ease,
+    border-color 0.5s ease;
+}
+
+.games-card:hover {
+  background: linear-gradient(165deg, #cfe6ff 0%, #96c8ff 55%, #5fa8ff 100%);
+  border-color: rgba(95, 168, 255, 0.4);
+}
+
+.games-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.games-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  box-shadow: 0 6px 14px rgba(31, 68, 122, 0.1);
+}
+
+.games-icon i {
+  font-size: 12px;
+  color: #1a2b45;
+}
+
+.games-card .card-title span {
+  color: #16233a;
+}
+
+.games-card__brand {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #111318;
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(10, 14, 24, 0.28);
+  transition: transform 0.4s cubic-bezier(0.22, 0.68, 0, 1.2);
+}
+
+.games-card:hover .games-card__brand {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.games-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.games-controller {
+  position: absolute;
+  z-index: 3;
+  width: 200px;
+  left: 15px;
+  bottom: -124px;
+  transform: rotate(-9deg);
+  filter: drop-shadow(0 18px 24px rgba(15, 40, 80, 0.18));
+  transition:
+    transform 0.5s cubic-bezier(0.22, 0.68, 0, 1.2),
+    bottom 0.5s cubic-bezier(0.22, 0.68, 0, 1.2);
+}
+
+.games-controller img {
+  width: 100%;
+}
+
+.games-card:hover .games-controller {
+  transform: rotate(-4deg);
+  bottom: -36px;
+}
+
+.games-headphones {
+  position: absolute;
+  z-index: 3;
+  width: 150px;
+  left: -112px;
+  top: -148px;
+  transform: rotate(23deg);
+  filter: drop-shadow(0 18px 24px rgba(15, 40, 80, 0.18));
+  transition:
+    transform 0.5s cubic-bezier(0.22, 0.68, 0, 1.2),
+    top 0.5s cubic-bezier(0.22, 0.68, 0, 1.2),
+    left 0.5s cubic-bezier(0.22, 0.68, 0, 1.2);
+}
+
+.games-headphones img {
+  width: 100%;
+}
+
+.games-card:hover .games-headphones {
+  transform: rotate(-4deg);
+  top: -70px;
+  left: -50px;
+}
+
+.game-case {
+  position: absolute;
+  width: 92px;
+  height: 128px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 16px 30px rgba(15, 40, 80, 0.2);
+  transition:
+    transform 0.5s cubic-bezier(0.22, 0.68, 0, 1.2),
+    box-shadow 0.5s ease,
+    top 0.5s cubic-bezier(0.22, 0.68, 0, 1.2),
+    right 0.5s cubic-bezier(0.22, 0.68, 0, 1.2);
+}
+
+.game-case::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 28% 20%,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0) 45%
+  );
+}
+
+.case-a {
+  top: 25px;
+  right: 90px;
+  z-index: 2;
+  transform: rotate(-11deg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.case-a img {
+  width: 100%;
+}
+
+.case-b {
+  top: 12px;
+  right: 40px;
+  z-index: 3;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: rotate(7deg);
+}
+
+.case-b img {
+  width: 100%;
+}
+
+.games-card:hover .case-a {
+  top: 22px;
+  right: 88px;
+  transform: rotate(-16deg) scale(1.06);
+  box-shadow: 0 22px 36px rgba(15, 40, 80, 0.26);
+}
+
+.games-card:hover .case-b {
+  top: 6px;
+  right: 14px;
+  transform: rotate(11deg) scale(1.06);
+  box-shadow: 0 22px 36px rgba(15, 40, 80, 0.26);
+}
+
+.backlog-title {
+  position: absolute;
+  width: 160px;
+  height: auto;
+  bottom: 32px;
+  left: 60px;
+}
+
+.backlog-title img {
+  width: 100%;
+}
+
+.games-card:hover .games-visit i {
+  transform: translate(3px, -3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .games-controller,
+  .game-case,
+  .games-card__brand {
+    transition: none;
+  }
+}
+
+.designers-card .card-title img {
+  width: 48px;
+  height: 48px;
+}
+
+.cosmos-logo {
+  width: 150px;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  transition:
+    left 0.6s cubic-bezier(0.22, 0.68, 0, 1.2),
+    box-shadow 0.5s ease;
+}
+
+.cosmos-logo img {
+  width: 100%;
+}
+
+.designers-card .card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.designers-card .designers-card__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.designers-card .card-title .designers-card__eyebrow {
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #1a1830;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.designers-card__star {
+  font-size: 17px;
+  color: #e8557a;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.designers-card__rule {
+  width: 34px;
+  height: 3px;
+  border-radius: 999px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #ff9db1 0%, #ffd1dc 100%);
+}
+
+.designers-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      circle at 10% 12%,
+      rgba(255, 195, 213, 0.34) 0%,
+      rgba(255, 195, 213, 0) 22%
+    ),
+    radial-gradient(
+      circle at 90% 14%,
+      rgba(255, 176, 202, 0.32) 0%,
+      rgba(255, 176, 202, 0) 20%
+    ),
+    linear-gradient(165deg, #fff8fa 0%, #fff1f5 55%, #ffe9f0 100%);
+  border: 1px solid rgba(236, 153, 183, 0.34);
+  box-shadow: 0 18px 38px rgba(171, 58, 102, 0.1);
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.designers-card:hover {
+  background:
+    radial-gradient(
+      circle at 84% 16%,
+      rgba(255, 119, 167, 0.38) 0%,
+      rgba(255, 119, 167, 0) 22%
+    ),
+    radial-gradient(
+      circle at 16% 88%,
+      rgba(226, 74, 133, 0.24) 0%,
+      rgba(226, 74, 133, 0) 18%
+    ),
+    linear-gradient(165deg, #ffd5e4 0%, #ffadc9 55%, #ff7fab 100%);
+  border-color: rgba(226, 91, 144, 0.52);
+  box-shadow: 0 22px 44px rgba(171, 58, 102, 0.2);
+}
+
+.designers-stage {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-height: 0;
+}
+
+.bloom-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin: -100px 0 0 -100px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(232, 85, 122, 0.16) 0%,
+    rgba(232, 85, 122, 0) 70%
+  );
+  filter: blur(10px);
+  opacity: 0.5;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.designers-card:hover .bloom-glow {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.bloom {
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  width: 0;
+  height: 0;
+  transition:
+    left 0.6s cubic-bezier(0.22, 0.68, 0, 1.2),
+    box-shadow 0.5s ease,
+    transform 0.5s ease;
+}
+
+.designers-card:hover .bloom {
+  left: 47%;
+}
+
+.designers-card:hover .cosmos-logo {
+  left: 18%;
+  transform: scale(0.6);
+}
+
+.bloom-avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  margin: -23px 0 0 -23px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  transform-origin: center;
+  transition:
+    transform 0.6s cubic-bezier(0.22, 0.68, 0, 1.2),
+    box-shadow 0.5s ease;
+}
+
+.bloom-avatar img {
+  width: 100%;
+}
+
+.b-1 {
+  background: linear-gradient(160deg, #ffb199, #e8557a);
+  transform: rotate(-18deg);
+  z-index: 1;
+  transition-delay: 0s;
+}
+.b-2 {
+  background: linear-gradient(160deg, #ffd59e, #ff9a5b);
+  transform: rotate(-13deg);
+  z-index: 2;
+  transition-delay: 0.03s;
+}
+.b-3 {
+  background: linear-gradient(160deg, #b8e0d2, #4fb89d);
+  transform: rotate(-8deg);
+  z-index: 3;
+  transition-delay: 0.06s;
+}
+.b-4 {
+  background: linear-gradient(160deg, #c9d6ff, #7c93ff);
+  transform: rotate(-3deg);
+  z-index: 4;
+  transition-delay: 0.09s;
+}
+.b-5 {
+  background: linear-gradient(160deg, #f3c9ff, #b072e8);
+  transform: rotate(3deg);
+  z-index: 4;
+  transition-delay: 0.12s;
+}
+.b-6 {
+  background: linear-gradient(160deg, #ffe9a8, #f2b705);
+  transform: rotate(8deg);
+  z-index: 3;
+  transition-delay: 0.15s;
+}
+.b-7 {
+  background: linear-gradient(160deg, #bee3f8, #4fa3d9);
+  transform: rotate(13deg);
+  z-index: 2;
+  transition-delay: 0.18s;
+}
+.b-8 {
+  background: linear-gradient(160deg, #fadde1, #e88ca0);
+  transform: rotate(18deg);
+  z-index: 1;
+  transition-delay: 0.21s;
+}
+
+.designers-card:hover .b-1 {
+  transform: rotate(-20deg) translateY(-70px) rotate(20deg);
+}
+
+.designers-card:hover .b-2 {
+  transform: rotate(25deg) translateY(-70px) rotate(-25deg);
+}
+
+.designers-card:hover .b-3 {
+  transform: rotate(70deg) translateY(-70px) rotate(-70deg);
+}
+
+.designers-card:hover .b-4 {
+  transform: rotate(115deg) translateY(-70px) rotate(-115deg);
+}
+
+.designers-card:hover .b-5 {
+  transform: rotate(160deg) translateY(-70px) rotate(-160deg);
+}
+
+.designers-card:hover .b-6 {
+  transform: rotate(205deg) translateY(-70px) rotate(-205deg);
+}
+
+.designers-card:hover .b-7 {
+  transform: rotate(250deg) translateY(-70px) rotate(-250deg);
+}
+
+.designers-card:hover .b-8 {
+  transform: rotate(295deg) translateY(-70px) rotate(-295deg);
+}
+
+.designers-card:hover .bloom-avatar {
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.22);
+}
+
+.footer-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #111111;
+  text-align: center;
+}
+
+.photo-stack {
+  position: absolute;
+
+  left: 50%;
+  bottom: 60px;
+
+  transform: translateX(-50%);
+
+  width: 210px;
+  height: 170px;
+}
+
+.photo {
+  position: absolute;
+
+  width: 120px;
+  height: 150px;
+
+  border-radius: 18px;
+
+  object-fit: cover;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  transition: 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.photo-1 {
+  z-index: 4;
+}
+
+.photo-2 {
+  z-index: 3;
+
+  transform: translateX(-50%) rotate(-6deg);
+
+  top: 16px;
+}
+
+.photo-3 {
+  z-index: 2;
+
+  transform: translateX(-50%) rotate(7deg);
+
+  top: 18px;
+}
+
+.photo-4 {
+  z-index: 1;
+
+  transform: translateX(-50%) rotate(-2deg);
+
+  top: 24px;
+}
+
+.gallary-card:hover {
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(0, 150, 136, 0.35),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 18% 88%,
+      rgba(0, 121, 107, 0.22),
+      transparent 18%
+    ),
+    linear-gradient(165deg, #a9e6de, #58c9bb, #00897b);
+}
+
+.gallary-card:hover .photo-1 {
+  transform: translate(-50%, -10px) rotate(0deg);
+}
+
+.gallary-card:hover .photo-2 {
+  transform: translate(-120%, -15px) rotate(-15deg);
+}
+
+.gallary-card:hover .photo-3 {
+  transform: translate(20%, -18px) rotate(16deg);
+}
+
+.gallary-card:hover .photo-4 {
+  transform: translate(-55%, 25px) rotate(-4deg);
+}

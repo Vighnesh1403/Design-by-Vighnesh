@@ -1,0 +1,252 @@
+.main-grid .card{
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1),
+    box-shadow .35s ease,
+    background-color .35s ease,
+    border-color .35s ease;
+  will-change: transform, box-shadow, background-color;
+}
+
+.main-grid .card:hover{
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(17,24,39,.12);
+}
+
+.main-grid .card:active{
+  transform: translateY(-2px) scale(.99);
+}
+
+.cv-card{
+  grid-column:span 6;
+  grid-row: span 4;
+  background-color:#f7f7f7;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.card-sub {
+    font-size: 24px;
+    font-weight:600;
+    letter-spacing: -0.02em;
+    color:  rgb(128, 124, 124);
+    opacity: 0.8;
+  transition: color .3s ease, opacity .3s ease, transform .3s ease;
+}
+
+
+.card-title-contact{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.card-title-contact span {
+  font-size:34px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #000;
+  transition: color .3s ease, transform .3s ease;
+}
+
+.card-title-contact img{
+  width:44px;
+  height:44px;
+  object-fit:cover;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, filter .3s ease;
+}
+
+.cv-card:hover {
+  background-color: rgb(0, 114, 245);
+}
+
+.cv-card:hover .card-title-contact span,
+ .cv-card:hover .card-sub {
+  color: #fff;
+}
+
+
+ .cv-card:hover .arrow-icon svg{
+  color:#000
+ }
+
+.main-grid .card:hover .card-sub{
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.main-grid .card:hover .card-title-contact span{
+  transform: translateY(-1px);
+}
+
+.main-grid .card:hover .card-title-contact img{
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 6px 18px 0px;
+}
+
+.arrow-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  background-color: #fff;
+  border-radius:500px;
+  position: absolute;
+  top:32px;
+  right:32px;
+  transition: transform .3s cubic-bezier(.22,1,.36,1), background-color .3s ease, box-shadow .3s ease;
+}
+
+.arrow-icon svg {
+  color: rgb(128, 124, 124);
+  transition: color .3s ease, transform .3s ease;
+}
+
+.main-grid .card:hover .arrow-icon{
+  transform: translateY(-2px) rotate(6deg);
+}
+
+.main-grid .card:hover .arrow-icon svg{
+  transform: translate(1px, -1px);
+}
+
+.dribble-card{
+  grid-column:span 4;
+  grid-row: span 4;
+  background-color:#f7f7f7;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.dribble-card:hover {
+  background-color: #ED4989;
+}
+
+.dribble-card:hover .card-title-contact span,
+ .dribble-card:hover .card-sub {
+  color: #fff;
+}
+
+.dribble-card:hover .card-title-contact img{
+  border: 1px solid #fff;
+}
+
+
+ .dribble-card:hover .arrow-icon svg{
+  color:#000
+ }
+
+.linkedin-card{
+  grid-column:span 4;
+  grid-row: span 4;
+  background-color:#f7f7f7;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+
+.linkedin-card:hover {
+  background-color: #2867B2;
+}
+
+.linkedin-card:hover .card-title-contact span,
+ .linkedin-card:hover .card-sub {
+  color: #fff;
+}
+
+.linkedin-card:hover .card-title-contact img{
+  border: 1px solid #fff;
+}
+
+
+ .linkedin-card:hover .arrow-icon svg{
+  color:#000
+ }
+
+ .instagram-card{
+  grid-column:span 5;
+  grid-row: span 4;
+  background-color:#f7f7f7;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+ }
+
+ 
+.instagram-card:hover {
+  background-color: rgb(196, 15, 117);
+}
+
+.instagram-card:hover .card-title-contact span,
+ .instagram-card:hover .card-sub {
+  color: #fff;
+}
+
+/* .dribble-card:hover .card-title-contact img{
+  border: 1px solid #fff;
+} */
+
+
+ .instagram-card:hover .arrow-icon svg{
+  color:#000
+ }
+
+ 
+
+ .mail-card{
+  grid-column:span 9;
+  grid-row: span 4;
+  background-color:#f7f7f7;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+ }
+
+ 
+.mail-card:hover {
+  background-color: rgb(235, 67, 52);
+}
+
+.mail-card:hover .card-title-contact span,
+ .mail-card:hover .card-sub {
+  color: #fff;
+}
+
+/* .dribble-card:hover .card-title-contact img{
+  border: 1px solid #fff;
+} */
+
+
+ .mail-card:hover .arrow-icon svg{
+  color:#000
+ }
+
+@media (prefers-reduced-motion: reduce){
+  .main-grid .card,
+  .card-sub,
+  .card-title-contact span,
+  .card-title-contact img,
+  .arrow-icon,
+  .arrow-icon svg{
+    transition:none !important;
+    animation:none !important;
+  }
+
+  .main-grid .card:hover,
+  .main-grid .card:active,
+  .main-grid .card:hover .arrow-icon,
+  .main-grid .card:hover .arrow-icon svg,
+  .main-grid .card:hover .card-sub,
+  .main-grid .card:hover .card-title-contact span,
+  .main-grid .card:hover .card-title-contact img{
+    transform:none !important;
+  }
+}

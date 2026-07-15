@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motion Design — Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="css/satoshi.css"/>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <link rel="stylesheet" href="css/style.css"/>
+  <!-- Motion gallery specific CSS -->
+  <link rel="stylesheet" href="css/motion-design.css"/>
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <div id="liquid-glass-cursor"></div>
+
+  <div class="container py-4">
+      <nav class="navbar-custom">
+
+      <div class="nav-links">
+        <a class="active" href="index.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </nav>
+
+      <header class="shots-header">
+        <span class="watermark">MOTION</span>
+        <h1>Motion Design</h1>
+        <p>A collection of clean, modern designs for web and mobile.</p>
+        <div class="shots-meta">
+          <div class="shots-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <span class="filter-pill"></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="shots-masonry">
+        <div class="shot-card" data-cat="web" data-title="Apple Wallet Card Gyro Pattern Color Char" data-desc="Feature player card">
+          <div class="shot-brand">
+            <span class="brand-dot" style="background: #ff7a45"></span>
+            <span class="brand-name">UTS</span>
+            <span class="shot-tag">Mobile</span>
+          </div>
+
+          <div
+            class="shot-player"
+            data-video-src="assets/videos/text-animation.mp4"
+          >
+            <video
+              class="shot-player-video"
+              src="assets/videos/text-animation.mp4"
+              preload="metadata"
+              playsinline
+            ></video>
+
+            <button class="shot-player-trigger" type="button" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="shot-player-controls" aria-label="Video controls">
+              <button class="player-control" type="button" data-action="toggle-play" aria-label="Pause video">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+
+              <button class="player-control" type="button" data-action="mute" aria-label="Mute video">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input class="player-progress" type="range" min="0" max="100" value="0" aria-label="Seek video" />
+
+              <button class="player-speed" type="button" data-action="speed" aria-label="Change playback speed">1x</button>
+
+              <button class="player-control" type="button" data-action="fullscreen" aria-label="Fullscreen">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="shot-info">
+            <h3>Railway ticketing app</h3>
+            <span class="shot-likes"><i class="fa-solid fa-heart"></i> 2</span>
+          </div>
+        </div>
+
+        <div class="shot-card" data-cat="web" data-title="Apple Wallet Card Gyro Pattern Color Char" data-desc="Feature player card">
+          <div class="shot-brand">
+            <span class="brand-dot" style="background: #ff7a45"></span>
+            <span class="brand-name">UTS</span>
+            <span class="shot-tag">Mobile</span>
+          </div>
+
+          <div
+            class="shot-player"
+            data-video-src="assets/videos/text-animation.mp4"
+          >
+            <video
+              class="shot-player-video"
+              src="assets/videos/amul-tru.mp4"
+              preload="metadata"
+              playsinline
+            ></video>
+
+            <button class="shot-player-trigger" type="button" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="shot-player-controls" aria-label="Video controls">
+              <button class="player-control" type="button" data-action="toggle-play" aria-label="Pause video">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+
+              <button class="player-control" type="button" data-action="mute" aria-label="Mute video">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input class="player-progress" type="range" min="0" max="100" value="0" aria-label="Seek video" />
+
+              <button class="player-speed" type="button" data-action="speed" aria-label="Change playback speed">1x</button>
+
+              <button class="player-control" type="button" data-action="fullscreen" aria-label="Fullscreen">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="shot-info">
+            <h3>3D beverage product showcase</h3>
+            <span class="shot-likes"><i class="fa-solid fa-heart"></i> 2</span>
+          </div>
+        </div>
+
+        <div class="shot-card" data-cat="web" data-title="Apple Wallet Card Gyro Pattern Color Char" data-desc="Feature player card">
+          <div class="shot-brand">
+            <span class="brand-dot" style="background: #ff7a45"></span>
+            <span class="brand-name">UTS</span>
+            <span class="shot-tag">Mobile</span>
+          </div>
+
+          <div
+            class="shot-player"
+            data-video-src="assets/videos/text-animation.mp4"
+          >
+            <video
+              class="shot-player-video"
+              src="assets/videos/text-mask.mp4"
+              preload="metadata"
+              playsinline
+            ></video>
+
+            <button class="shot-player-trigger" type="button" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="shot-player-controls" aria-label="Video controls">
+              <button class="player-control" type="button" data-action="toggle-play" aria-label="Pause video">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+
+              <button class="player-control" type="button" data-action="mute" aria-label="Mute video">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input class="player-progress" type="range" min="0" max="100" value="0" aria-label="Seek video" />
+
+              <button class="player-speed" type="button" data-action="speed" aria-label="Change playback speed">1x</button>
+
+              <button class="player-control" type="button" data-action="fullscreen" aria-label="Fullscreen">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="shot-info">
+            <h3>Scroll-based text reveal</h3>
+            <span class="shot-likes"><i class="fa-solid fa-heart"></i> 2</span>
+          </div>
+        </div>
+
+        <div class="shot-card" data-cat="web" data-title="Apple Wallet Card Gyro Pattern Color Char" data-desc="Feature player card">
+          <div class="shot-brand">
+            <span class="brand-dot" style="background: #ff7a45"></span>
+            <span class="brand-name">UTS</span>
+            <span class="shot-tag">Mobile</span>
+          </div>
+
+          <div
+            class="shot-player"
+            data-video-src="assets/videos/text-animation.mp4"
+          >
+            <video
+              class="shot-player-video"
+              src="assets/videos/dermalcare.mp4"
+              preload="metadata"
+              playsinline
+            ></video>
+
+            <button class="shot-player-trigger" type="button" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="shot-player-controls" aria-label="Video controls">
+              <button class="player-control" type="button" data-action="toggle-play" aria-label="Pause video">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+
+              <button class="player-control" type="button" data-action="mute" aria-label="Mute video">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input class="player-progress" type="range" min="0" max="100" value="0" aria-label="Seek video" />
+
+              <button class="player-speed" type="button" data-action="speed" aria-label="Change playback speed">1x</button>
+
+              <button class="player-control" type="button" data-action="fullscreen" aria-label="Fullscreen">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="shot-info">
+            <h3>Modern skincare website</h3>
+            <span class="shot-likes"><i class="fa-solid fa-heart"></i> 2</span>
+          </div>
+        </div>
+
+        <div class="shot-card" data-cat="web" data-title="Apple Wallet Card Gyro Pattern Color Char" data-desc="Feature player card">
+          <div class="shot-brand">
+            <span class="brand-dot" style="background: #ff7a45"></span>
+            <span class="brand-name">UTS</span>
+            <span class="shot-tag">Mobile</span>
+          </div>
+
+          <div
+            class="shot-player"
+            data-video-src="assets/videos/text-animation.mp4"
+          >
+            <video
+              class="shot-player-video"
+              src="assets/videos/intro-epic.mp4"
+              preload="metadata"
+              playsinline
+            ></video>
+
+            <button class="shot-player-trigger" type="button" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="shot-player-controls" aria-label="Video controls">
+              <button class="player-control" type="button" data-action="toggle-play" aria-label="Pause video">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+
+              <button class="player-control" type="button" data-action="mute" aria-label="Mute video">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input class="player-progress" type="range" min="0" max="100" value="0" aria-label="Seek video" />
+
+              <button class="player-speed" type="button" data-action="speed" aria-label="Change playback speed">1x</button>
+
+              <button class="player-control" type="button" data-action="fullscreen" aria-label="Fullscreen">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="shot-info">
+            <h3>Mobile app introduction</h3>
+            <span class="shot-likes"><i class="fa-solid fa-heart"></i> 2</span>
+          </div>
+        </div>
+
+        <div class="shot-card" data-cat="web" data-title="Apple Wallet Card Gyro Pattern Color Char" data-desc="Feature player card">
+          <div class="shot-brand">
+            <span class="brand-dot" style="background: #ff7a45"></span>
+            <span class="brand-name">UTS</span>
+            <span class="shot-tag">Mobile</span>
+          </div>
+
+          <div
+            class="shot-player"
+            data-video-src="assets/videos/text-animation.mp4"
+          >
+            <video
+              class="shot-player-video"
+              src="assets/videos/furniture.mp4"
+              preload="metadata"
+              playsinline
+            ></video>
+
+            <button class="shot-player-trigger" type="button" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="shot-player-controls" aria-label="Video controls">
+              <button class="player-control" type="button" data-action="toggle-play" aria-label="Pause video">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+
+              <button class="player-control" type="button" data-action="mute" aria-label="Mute video">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input class="player-progress" type="range" min="0" max="100" value="0" aria-label="Seek video" />
+
+              <button class="player-speed" type="button" data-action="speed" aria-label="Change playback speed">1x</button>
+
+              <button class="player-control" type="button" data-action="fullscreen" aria-label="Fullscreen">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="shot-info">
+            <h3>Premium furniture website intro animation</h3>
+            <span class="shot-likes"><i class="fa-solid fa-heart"></i> 2</span>
+          </div>
+        </div>
+
+        <div class="shot-card" data-cat="web" data-title="Apple Wallet Card Gyro Pattern Color Char" data-desc="Feature player card">
+          <div class="shot-brand">
+            <span class="brand-dot" style="background: #ff7a45"></span>
+            <span class="brand-name">UTS</span>
+            <span class="shot-tag">Mobile</span>
+          </div>
+
+          <div
+            class="shot-player"
+            data-video-src="assets/videos/text-animation.mp4"
+          >
+            <video
+              class="shot-player-video"
+              src="assets/videos/hecoll.mp4"
+              preload="metadata"
+              playsinline
+            ></video>
+
+            <button class="shot-player-trigger" type="button" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="shot-player-controls" aria-label="Video controls">
+              <button class="player-control" type="button" data-action="toggle-play" aria-label="Pause video">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+
+              <button class="player-control" type="button" data-action="mute" aria-label="Mute video">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input class="player-progress" type="range" min="0" max="100" value="0" aria-label="Seek video" />
+
+              <button class="player-speed" type="button" data-action="speed" aria-label="Change playback speed">1x</button>
+
+              <button class="player-control" type="button" data-action="fullscreen" aria-label="Fullscreen">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="shot-info">
+            <h3>Creative loading experience for website</h3>
+            <span class="shot-likes"><i class="fa-solid fa-heart"></i> 2</span>
+          </div>
+        </div>
+
+        <div class="shot-card" data-cat="web" data-title="Apple Wallet Card Gyro Pattern Color Char" data-desc="Feature player card">
+          <div class="shot-brand">
+            <span class="brand-dot" style="background: #ff7a45"></span>
+            <span class="brand-name">UTS</span>
+            <span class="shot-tag">Mobile</span>
+          </div>
+
+          <div
+            class="shot-player"
+            data-video-src="assets/videos/text-animation.mp4"
+          >
+            <video
+              class="shot-player-video"
+              src="assets/videos/kreo.mp4"
+              preload="metadata"
+              playsinline
+            ></video>
+
+            <button class="shot-player-trigger" type="button" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="shot-player-controls" aria-label="Video controls">
+              <button class="player-control" type="button" data-action="toggle-play" aria-label="Pause video">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+
+              <button class="player-control" type="button" data-action="mute" aria-label="Mute video">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input class="player-progress" type="range" min="0" max="100" value="0" aria-label="Seek video" />
+
+              <button class="player-speed" type="button" data-action="speed" aria-label="Change playback speed">1x</button>
+
+              <button class="player-control" type="button" data-action="fullscreen" aria-label="Fullscreen">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="shot-info">
+            <h3>Interactive product showcase</h3>
+            <span class="shot-likes"><i class="fa-solid fa-heart"></i> 2</span>
+          </div>
+        </div>
+
+        <div class="shot-card" data-cat="web" data-title="Apple Wallet Card Gyro Pattern Color Char" data-desc="Feature player card">
+          <div class="shot-brand">
+            <span class="brand-dot" style="background: #ff7a45"></span>
+            <span class="brand-name">UTS</span>
+            <span class="shot-tag">Mobile</span>
+          </div>
+
+          <div
+            class="shot-player"
+            data-video-src="assets/videos/text-animation.mp4"
+          >
+            <video
+              class="shot-player-video"
+              src="assets/videos/game-web.mp4"
+              preload="metadata"
+              playsinline
+            ></video>
+
+            <button class="shot-player-trigger" type="button" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="shot-player-controls" aria-label="Video controls">
+              <button class="player-control" type="button" data-action="toggle-play" aria-label="Pause video">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+
+              <button class="player-control" type="button" data-action="mute" aria-label="Mute video">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input class="player-progress" type="range" min="0" max="100" value="0" aria-label="Seek video" />
+
+              <button class="player-speed" type="button" data-action="speed" aria-label="Change playback speed">1x</button>
+
+              <button class="player-control" type="button" data-action="fullscreen" aria-label="Fullscreen">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="shot-info">
+            <h3>Interactive website experience</h3>
+            <span class="shot-likes"><i class="fa-solid fa-heart"></i> 2</span>
+          </div>
+        </div>
+
+        <div class="shot-card" data-cat="web" data-title="Apple Wallet Card Gyro Pattern Color Char" data-desc="Feature player card">
+          <div class="shot-brand">
+            <span class="brand-dot" style="background: #ff7a45"></span>
+            <span class="brand-name">UTS</span>
+            <span class="shot-tag">Mobile</span>
+          </div>
+
+          <div
+            class="shot-player"
+            data-video-src="assets/videos/text-animation.mp4"
+          >
+            <video
+              class="shot-player-video"
+              src="assets/videos/anime.mp4"
+              preload="metadata"
+              playsinline
+            ></video>
+
+            <button class="shot-player-trigger" type="button" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="shot-player-controls" aria-label="Video controls">
+              <button class="player-control" type="button" data-action="toggle-play" aria-label="Pause video">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+
+              <button class="player-control" type="button" data-action="mute" aria-label="Mute video">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input class="player-progress" type="range" min="0" max="100" value="0" aria-label="Seek video" />
+
+              <button class="player-speed" type="button" data-action="speed" aria-label="Change playback speed">1x</button>
+
+              <button class="player-control" type="button" data-action="fullscreen" aria-label="Fullscreen">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="shot-info">
+            <h3>Anime streaming interface swipe animation</h3>
+            <span class="shot-likes"><i class="fa-solid fa-heart"></i> 2</span>
+          </div>
+        </div>
+
+        <div class="shot-card" data-cat="web" data-title="Apple Wallet Card Gyro Pattern Color Char" data-desc="Feature player card">
+          <div class="shot-brand">
+            <span class="brand-dot" style="background: #ff7a45"></span>
+            <span class="brand-name">UTS</span>
+            <span class="shot-tag">Mobile</span>
+          </div>
+
+          <div
+            class="shot-player"
+            data-video-src="assets/videos/grantha.mp4"
+          >
+            <video
+              class="shot-player-video"
+              src="assets/videos/grantha.mp4"
+              preload="metadata"
+              playsinline
+            ></video>
+
+            <button class="shot-player-trigger" type="button" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="shot-player-controls" aria-label="Video controls">
+              <button class="player-control" type="button" data-action="toggle-play" aria-label="Pause video">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+
+              <button class="player-control" type="button" data-action="mute" aria-label="Mute video">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+
+              <input class="player-progress" type="range" min="0" max="100" value="0" aria-label="Seek video" />
+
+              <button class="player-speed" type="button" data-action="speed" aria-label="Change playback speed">1x</button>
+
+              <button class="player-control" type="button" data-action="fullscreen" aria-label="Fullscreen">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="shot-info">
+            <h3>Grantha's application carousel animation</h3>
+            <span class="shot-likes"><i class="fa-solid fa-heart"></i> 2</span>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <!-- LEFT -->
+        <div class="footer-left">
+          <div class="location-hover">
+            <div class="location-info">
+              <span>Mumbai</span>
+              <span>•</span>
+              <span>26°C</span>
+              <span>•</span>
+              <span id="clock">11:08:53</span>
+            </div>
+
+            <!-- HOVER IMAGES -->
+            <div class="hover-preview">
+              <img
+                src="assets/images/gateway-of-india.jpg"
+                class="preview-img"
+              />
+              <img
+                src="assets/images/bandra-warli-sea-link.jpg"
+                class="preview-img"
+              />
+              <img src="assets/images/marins.jpg" class="preview-img" />
+              <img src="assets/images/csmt.jpg" class="preview-img" />
+              <img src="assets/images/night-view.png" class="preview-img" />
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-right">
+          <a href="#">X (Twitter)</a>
+
+          <div class="divider"></div>
+
+          <a href="#">LinkedIn</a>
+
+          <div class="divider"></div>
+
+          <a href="#">Instagram</a>
+
+          <div class="divider"></div>
+
+          <a href="#">CV</a>
+        </div>
+      </footer>
+    </div>
+
+    
+
+  <script src="js/script.js"></script>
+  <script>
+    (function () {
+      var players = Array.prototype.slice.call(document.querySelectorAll('.shot-player'));
+      var playbackRates = [1, 1.25, 1.5, 2];
+
+      players.forEach(function (player) {
+        var video = player.querySelector('.shot-player-video');
+        var trigger = player.querySelector('.shot-player-trigger');
+        var playButton = player.querySelector('[data-action="toggle-play"]');
+        var muteButton = player.querySelector('[data-action="mute"]');
+        var progress = player.querySelector('.player-progress');
+        var speedButton = player.querySelector('[data-action="speed"]');
+        var fullscreenButton = player.querySelector('[data-action="fullscreen"]');
+        var currentRateIndex = 0;
+
+        if (!video || !trigger || !playButton || !muteButton || !progress || !speedButton || !fullscreenButton) {
+          return;
+        }
+
+        function setPlayingState(isPlaying) {
+          player.classList.toggle('is-playing', isPlaying);
+          playButton.innerHTML = isPlaying
+            ? '<i class="fa-solid fa-pause"></i>'
+            : '<i class="fa-solid fa-play"></i>';
+          playButton.setAttribute('aria-label', isPlaying ? 'Pause video' : 'Play video');
+        }
+
+        function updateMuteState() {
+          var muted = video.muted || video.volume === 0;
+          muteButton.innerHTML = muted
+            ? '<i class="fa-solid fa-volume-xmark"></i>'
+            : '<i class="fa-solid fa-volume-high"></i>';
+          muteButton.setAttribute('aria-label', muted ? 'Unmute video' : 'Mute video');
+        }
+
+        function updateProgress() {
+          if (!video.duration) return;
+          progress.value = String((video.currentTime / video.duration) * 100);
+        }
+
+        function playVideo() {
+          video.play().then(function () {
+            setPlayingState(true);
+          }).catch(function () {
+            video.muted = true;
+            updateMuteState();
+            video.play().then(function () {
+              setPlayingState(true);
+            });
+          });
+        }
+
+        function pauseVideo() {
+          video.pause();
+          setPlayingState(false);
+        }
+
+        trigger.addEventListener('click', function () {
+          playVideo();
+        });
+
+        playButton.addEventListener('click', function () {
+          if (video.paused) {
+            playVideo();
+          } else {
+            pauseVideo();
+          }
+        });
+
+        muteButton.addEventListener('click', function () {
+          video.muted = !video.muted;
+          if (video.muted) {
+            video.volume = 0;
+          } else if (video.volume === 0) {
+            video.volume = 1;
+          }
+          updateMuteState();
+        });
+
+        progress.addEventListener('input', function () {
+          if (!video.duration) return;
+          video.currentTime = (Number(progress.value) / 100) * video.duration;
+        });
+
+        speedButton.addEventListener('click', function () {
+          currentRateIndex = (currentRateIndex + 1) % playbackRates.length;
+          video.playbackRate = playbackRates[currentRateIndex];
+          speedButton.textContent = playbackRates[currentRateIndex] + 'x';
+        });
+
+        fullscreenButton.addEventListener('click', function () {
+          if (document.fullscreenElement) {
+            document.exitFullscreen();
+            return;
+          }
+
+          if (player.requestFullscreen) {
+            player.requestFullscreen();
+          }
+        });
+
+        video.addEventListener('play', function () {
+          setPlayingState(true);
+        });
+
+        video.addEventListener('pause', function () {
+          setPlayingState(false);
+        });
+
+        video.addEventListener('timeupdate', updateProgress);
+        video.addEventListener('loadedmetadata', function () {
+          progress.value = '0';
+        });
+        video.addEventListener('volumechange', updateMuteState);
+        video.addEventListener('ended', function () {
+          setPlayingState(false);
+        });
+
+        video.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            if (video.paused) {
+              playVideo();
+            } else {
+              pauseVideo();
+            }
+          }
+        });
+
+        setPlayingState(false);
+        updateMuteState();
+        speedButton.textContent = '1x';
+        video.playbackRate = 1;
+        video.loop = true;
+        video.playsInline = true;
+      });
+    })();
+  </script>
+    <script>
+      // ---------- filter tabs ----------
+      (function () {
+        var buttons = Array.prototype.slice.call(
+          document.querySelectorAll(".filter-btn"),
+        );
+        var pill = document.querySelector(".filter-pill");
+        var cards = Array.prototype.slice.call(
+          document.querySelectorAll(".shot-card"),
+        );
+
+        function movePill(btn) {
+          pill.style.width = btn.offsetWidth + "px";
+          pill.style.transform = "translateX(" + btn.offsetLeft + "px)";
+        }
+
+        function applyFilter(cat) {
+          cards.forEach(function (card) {
+            var match = cat === "all" || card.dataset.cat === cat;
+            if (match) {
+              card.style.display = "";
+              requestAnimationFrame(function () {
+                card.classList.remove("is-hidden");
+              });
+            } else {
+              card.classList.add("is-hidden");
+              setTimeout(function () {
+                if (card.classList.contains("is-hidden"))
+                  card.style.display = "none";
+              }, 320);
+            }
+          });
+        }
+
+        buttons.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            buttons.forEach(function (b) {
+              b.classList.remove("active");
+            });
+            btn.classList.add("active");
+            movePill(btn);
+            applyFilter(btn.dataset.filter);
+          });
+        });
+
+        window.addEventListener("resize", function () {
+          var active = document.querySelector(".filter-btn.active");
+          if (active) movePill(active);
+        });
+
+        movePill(document.querySelector(".filter-btn.active"));
+      })();
+    </script>
+</body>
+</html>
+
+
