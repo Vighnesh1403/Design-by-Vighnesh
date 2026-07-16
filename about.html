@@ -28,18 +28,12 @@
     <link rel="stylesheet" href="css/satoshi.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css">
   </head>
 
   <style>
     .card-title {
       justify-content: end;
-    }
-
-    .main-grid {
-      display: grid;
-      grid-template-columns: repeat(14, 1fr);
-      grid-auto-rows: 70px;
-      gap: 16px;
     }
   </style>
 
@@ -114,30 +108,28 @@
           "
         >
           <div class="card-title">
+            <div class="gallary-card__eyebrow">Little<br />moments</div>
             <img src="assets/images/gallary/gallary-logo.png" alt="" />
           </div>
 
-          <div class="photo-stack">
-            <img
-              class="photo photo-1"
-              src="assets/images/gallary/image-1.jpg"
-            />
+          <div class="gallary-stage" aria-hidden="true">
+            <div class="frame-glow"></div>
 
-            <img
-              class="photo photo-2"
-              src="assets/images/gallary/image-2.png"
-            />
-
-            <img
-              class="photo photo-3"
-              src="assets/images/gallary/image-3.png"
-            />
-
-            <img
-              class="photo photo-4"
-              src="assets/images/gallary/image-4.jpg"
-            />
+            <div class="frame frame-1">
+              <img src="assets/images/gallary/image-1.jpg" alt="" />
+            </div>
+            <div class="frame frame-2">
+              <img src="assets/images/gallary/image-2.png" alt="" />
+            </div>
+            <div class="frame frame-3">
+              <img src="assets/images/gallary/image-3.png" alt="" />
+            </div>
+            <div class="frame frame-4">
+              <img src="assets/images/gallary/image-4.jpg" alt="" />
+            </div>
           </div>
+
+          <div class="footer-text">A few frames from my feed</div>
         </div>
 
         <div

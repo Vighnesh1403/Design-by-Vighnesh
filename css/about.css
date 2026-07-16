@@ -6,23 +6,112 @@
 .gallary-card {
   grid-column: span 3;
   grid-row: span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  isolation: isolate;
   overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 14% 10%,
+      rgba(255, 189, 107, 0.24) 0%,
+      rgba(255, 189, 107, 0) 24%
+    ),
+    radial-gradient(
+      circle at 92% 12%,
+      rgba(255, 214, 153, 0.4) 0%,
+      rgba(255, 214, 153, 0) 20%
+    ),
+    linear-gradient(180deg, #fffdfa 0%, #fff8ef 100%);
+  border: 1px solid rgba(255, 190, 120, 0.3);
+  box-shadow: 0 18px 38px rgba(120, 74, 12, 0.08);
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.gallary-card:hover {
+  border-color: rgba(255, 154, 62, 0.55);
+  box-shadow: 0 24px 46px rgba(120, 74, 12, 0.18);
+  background:
+    radial-gradient(
+      circle at 88% 14%,
+      rgba(255, 158, 66, 0.4) 0%,
+      rgba(255, 158, 66, 0) 20%
+    ),
+    radial-gradient(
+      circle at 10% 92%,
+      rgba(255, 115, 66, 0.24) 0%,
+      rgba(255, 115, 66, 0) 16%
+    ),
+    linear-gradient(165deg, #ffe4c4 0%, #ffbc79 55%, #ff8a4c 100%);
 }
 
 .gallary-card .card-title {
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .gallary-card .card-title img {
   width: 48px;
   height: 48px;
   border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(120, 74, 12, 0.14);
+}
+
+.gallary-card__eyebrow {
+  font-size: 20px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  color: rgb(26, 24, 48);
 }
 
 .spotify-card {
   grid-column: span 3;
   grid-row: span 4;
+  position: relative;
+  isolation: isolate;
   overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 12% 10%,
+      rgba(137, 230, 148, 0.22) 0%,
+      rgba(137, 230, 148, 0) 24%
+    ),
+    radial-gradient(
+      circle at 90% 12%,
+      rgba(120, 214, 132, 0.3) 0%,
+      rgba(120, 214, 132, 0) 20%
+    ),
+    linear-gradient(180deg, #fafffb 0%, #f2fbf3 100%);
+  border: 1px solid rgba(137, 230, 148, 0.32);
+  box-shadow: 0 18px 38px rgba(30, 120, 50, 0.08);
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.spotify-card:hover {
+  border-color: rgba(79, 200, 104, 0.55);
+  box-shadow: 0 24px 46px rgba(20, 90, 40, 0.2);
+  background:
+    radial-gradient(
+      circle at 88% 14%,
+      rgba(79, 200, 104, 0.4) 0%,
+      rgba(79, 200, 104, 0) 20%
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(40, 150, 70, 0.22) 0%,
+      rgba(40, 150, 70, 0) 16%
+    ),
+    linear-gradient(165deg, #eafcec 0%, #9de8a8 50%, #4fc868 100%);
 }
 
 .card.anime-card {
@@ -514,10 +603,6 @@
   bottom: 40px;
 }
 
-.spotify-card:hover {
-  background-color: rgb(137, 230, 148);
-}
-
 @media (max-width: 992px) {
   .anime-card {
     grid-column: span 14;
@@ -532,10 +617,6 @@
 @media (max-width: 768px) {
   .anime-card {
     padding: 24px;
-  }
-
-  .anime-card__header {
-    flex-direction: column;
   }
 
   .anime-card__brand {
@@ -1098,92 +1179,126 @@
   text-align: center;
 }
 
-.photo-stack {
-  position: absolute;
-
-  left: 50%;
-  bottom: 60px;
-
-  transform: translateX(-50%);
-
-  width: 210px;
-  height: 170px;
-}
-
-.photo {
-  position: absolute;
-
-  width: 120px;
-  height: 150px;
-
-  border-radius: 18px;
-
-  object-fit: cover;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  transition: 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.photo-1 {
-  z-index: 4;
-}
-
-.photo-2 {
-  z-index: 3;
-
-  transform: translateX(-50%) rotate(-6deg);
-
-  top: 16px;
-}
-
-.photo-3 {
+.gallary-card .footer-text {
+  position: relative;
   z-index: 2;
-
-  transform: translateX(-50%) rotate(7deg);
-
-  top: 18px;
 }
 
-.photo-4 {
+.gallary-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
   z-index: 1;
+}
 
+.frame-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 170px;
+  height: 170px;
+  margin: -85px 0 0 -85px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 158, 66, 0.26) 0%,
+    rgba(255, 158, 66, 0) 70%
+  );
+  filter: blur(10px);
+  opacity: 0.45;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.gallary-card:hover .frame-glow {
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+.frame {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  width: 88px;
+  height: 108px;
+  box-sizing: border-box;
+  padding: 5px 5px 14px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 26px rgba(120, 74, 12, 0.16);
+  transform-origin: bottom center;
+  transition:
+    left 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    bottom 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+}
+
+.frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.frame-1 {
+  z-index: 4;
   transform: translateX(-50%) rotate(-2deg);
-
-  top: 24px;
 }
 
-.gallary-card:hover {
-  background:
-    radial-gradient(
-      circle at 82% 18%,
-      rgba(0, 150, 136, 0.35),
-      transparent 22%
-    ),
-    radial-gradient(
-      circle at 18% 88%,
-      rgba(0, 121, 107, 0.22),
-      transparent 18%
-    ),
-    linear-gradient(165deg, #a9e6de, #58c9bb, #00897b);
+.frame-2 {
+  z-index: 3;
+  bottom: 20px;
+  transform: translateX(-50%) rotate(7deg);
 }
 
-.gallary-card:hover .photo-1 {
-  transform: translate(-50%, -10px) rotate(0deg);
+.frame-3 {
+  z-index: 2;
+  bottom: 24px;
+  transform: translateX(-50%) rotate(-8deg);
 }
 
-.gallary-card:hover .photo-2 {
-  transform: translate(-120%, -15px) rotate(-15deg);
+.frame-4 {
+  z-index: 1;
+  bottom: 28px;
+  transform: translateX(-50%) rotate(4deg);
 }
 
-.gallary-card:hover .photo-3 {
-  transform: translate(20%, -18px) rotate(16deg);
+.gallary-card:hover .frame-1 {
+  left: 38%;
+  bottom: 42px;
+  transform: translateX(-50%) rotate(-4deg) scale(1.08);
+  box-shadow: 0 22px 38px rgba(120, 74, 12, 0.26);
+  transition-delay: 0.09s;
 }
 
-.gallary-card:hover .photo-4 {
-  transform: translate(-55%, 25px) rotate(-4deg);
+.gallary-card:hover .frame-2 {
+  left: 14%;
+  bottom: 22px;
+  transform: translateX(-50%) rotate(-17deg) scale(0.95);
+  transition-delay: 0s;
+}
+
+.gallary-card:hover .frame-3 {
+  left: 86%;
+  bottom: 18px;
+  transform: translateX(-50%) rotate(17deg) scale(0.95);
+  transition-delay: 0.03s;
+}
+
+.gallary-card:hover .frame-4 {
+  left: 62%;
+  bottom: 34px;
+  transform: translateX(-50%) rotate(6deg) scale(1);
+  transition-delay: 0.06s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallary-card,
+  .frame,
+  .frame-glow {
+    transition: none;
+  }
 }
