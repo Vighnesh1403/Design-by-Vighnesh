@@ -264,7 +264,7 @@
   }
 
   .review-card {
-    width: 300px;
+    height: 300px;
     border-radius: 20px;
   }
 
@@ -321,6 +321,20 @@
   .activity-through-booking {
     width:100%;
   }
+
+  .end-to-end-flow .section-right {
+    height: 350px;
+  }
+
+  .shot-player-video {
+    height:auto;
+  }
+
+  .shot-player-activity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* MOBILE - Extra Small (below 360px) */
@@ -360,6 +374,10 @@
 
    /* MOBILE - Small (480px and below) */
 @media(max-width:480px){
+
+  #liquid-glass-cursor {
+    display:none;
+  }
 
    .main-grid {
     display:flex;
@@ -545,6 +563,14 @@
     width: 230px;
 }
 
+.dribble-shots {
+  height:343px;
+}
+
+.medium-card {
+  height:343px;
+}
+
   .footer {
     width:343px;
     align-items: center;
@@ -626,7 +652,7 @@
 
    .games-controller {
     left: 40px;
-    bottom:115px;
+    bottom:-115px;
    }
 
    .games-headphones {
@@ -641,6 +667,36 @@
    .about-me-card p {
     font-size:17px;
    }
+
+
+  }
+
+
+  /* ========================================
+   RESPONSIVE DESIGN - motion design
+   ======================================== */
+
+
+   /* MOBILE - Small (480px and below) */
+@media(max-width:480px){
+
+   .shots-header {
+    width: 343px;
+   }
+
+   .shots-header p {
+    text-align:center;
+   }
+
+   .shots-masonry {
+    width: 343px;
+   }
+
+   .shot-card {
+    margin-bottom: 32px;
+   }
+
+
 
 
   }

@@ -177,10 +177,9 @@ if (hoverArea && images.length) {
   if(!section){
     return;
   }
-  var steps = Array.prototype.slice.call(section.querySelectorAll('.dj-step'));
-  var photos = Array.prototype.slice.call(section.querySelectorAll('.dj-photo'));
-  var chip = document.getElementById('djChip');
-  var titles = steps.map(function(s){ return s.querySelector('.dj-step-title').textContent; });
+  var steps = Array.prototype.slice.call(section.querySelectorAll('.dj2-node'));
+  var photos = Array.prototype.slice.call(section.querySelectorAll('.dj2-photo'));
+  var slides = Array.prototype.slice.call(section.querySelectorAll('.dj2-slide'));
 
   var DURATION = 6000;
   var idx = 0;
@@ -199,13 +198,14 @@ if (hoverArea && images.length) {
     steps[idx].setAttribute('aria-selected','false');
     setFill(idx, 0);
     photos[idx].classList.remove('active');
+    slides[idx].classList.remove('active');
 
     idx = newIndex;
 
     steps[idx].classList.add('active');
     steps[idx].setAttribute('aria-selected','true');
     photos[idx].classList.add('active');
-    chip.textContent = 'Iteration 0' + (idx+1) + ' \u2014 ' + titles[idx];
+    slides[idx].classList.add('active');
 
     segmentStart = performance.now();
     setFill(idx, 0);
@@ -246,8 +246,6 @@ if (hoverArea && images.length) {
     if(e.key === 'ArrowRight'){ goTo((idx+1) % steps.length); }
     if(e.key === 'ArrowLeft'){ goTo((idx-1+steps.length) % steps.length); }
   });
-
-  chip.textContent = 'Iteration 01 \u2014 ' + titles[0];
 
   if(!reduceMotion){
     raf = requestAnimationFrame(frame);
