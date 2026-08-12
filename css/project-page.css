@@ -1190,3 +1190,35 @@
     font-weight:700;
     letter-spacing:.02em;
   }
+
+  /* extra  */
+
+  .research-aoap {
+    background-color: #fac78d;
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.review-card-2 {
+    
+    padding: 36px;
+    border-radius: 52px;
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    justify-content: space-between;
+    align-items: start;
+    height: 350px;
+}
+
+
+.problem-img-activity {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.problem-img-activity img {
+    width: 100%;
+}
